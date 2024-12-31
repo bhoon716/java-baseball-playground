@@ -34,4 +34,15 @@ class NumberDtoTest {
         //then
         assertThat(exception.getMessage()).contains("숫자 범위");
     }
+
+    @Test
+    void duplicates_test(){
+        String[] numbers = {"1", "1", "2"};
+
+        IllegalArgumentException e = assertThrows(IllegalArgumentException.class, () -> {
+            new NumberDto(numbers);
+        });
+
+        assertThat(e.getMessage()).contains("중복 숫자");
+    }
 }
