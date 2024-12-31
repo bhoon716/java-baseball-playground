@@ -34,7 +34,7 @@ public class BaseballController {
         do {
              result = tryOnce();
              baseballView.printJudgeCount(result);
-        } while(!result.isThreeStrike);
+        } while(!result.isThreeStrike());
     }
 
     private JudgeCountDto tryOnce() {

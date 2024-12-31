@@ -10,4 +10,8 @@ public class NumberDto {
         NumberValidator.validateNumbers(numbers);
         this.numbers = numbers;
     }
+
+    public String[] getNumbers(){
+        return numbers;
+    }
 }
