@@ -12,6 +12,7 @@ public class BaseballController {
     private final BaseballView baseballView;
     private final PlayerService playerService;
     private final ComputerService computerService;
+    private final JudgeService judgeService;
 
     public BaseballController(BaseballView baseballView, PlayerService playerService, ComputerService computerService, JudgeService judgeService) {
         this.baseballView = baseballView;
@@ -19,8 +20,6 @@ public class BaseballController {
         this.computerService = computerService;
         this.judgeService = judgeService;
     }
-
-    private final JudgeService judgeService;
 
     public void playBaseball(){
         do {
