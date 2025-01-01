@@ -11,10 +11,10 @@ public class PlayerServiceImpl implements PlayerService{
     @Override
     public boolean askRestart() {
         String input = scanner.nextLine();
-        if(input == "1") {
+        if(input.equals("1")) {
             return true;
         }
-        if(input == "2") {
+        if(input.equals("2")) {
             return false;
         }
         throw new IllegalArgumentException("잘못된 값");
