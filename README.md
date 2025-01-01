@@ -18,7 +18,13 @@
 - 3스트라이크 후 재시작 여부 물어봄
 - 1 입력하면 게임 재시작, 2 입력하면 종료
 
+### 5. 테스트 코드 작성
+
+
 ---
+## 부족한 점
+- TDD 수행 및 테스트 코드 작성
+- AppConfig 클래스 및 의존성 주입
 
 ---
 ## [NEXTSTEP 플레이그라운드의 미션 진행 과정](https://github.com/next-step/nextstep-docs/blob/master/playground/README.md)

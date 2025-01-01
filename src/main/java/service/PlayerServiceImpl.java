@@ -10,11 +10,11 @@ public class PlayerServiceImpl implements PlayerService{
 
     @Override
     public boolean askRestart() {
-        int input = scanner.nextInt();
-        if(input == 1) {
+        String input = scanner.nextLine();
+        if(input == "1") {
             return true;
         }
-        if(input == 2) {
+        if(input == "2") {
             return false;
         }
         throw new IllegalArgumentException("잘못된 값");
@@ -23,7 +23,7 @@ public class PlayerServiceImpl implements PlayerService{
     @Override
     public NumberDto inputPlayerNumber() {
         String input = scanner.nextLine();
-        String[] playerNumber = input.split(" ");
+        String[] playerNumber = input.split("");
         return new NumberDto(playerNumber);
     }
 }

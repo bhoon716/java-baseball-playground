@@ -21,16 +21,22 @@ public class BaseballController {
         this.judgeService = judgeService;
     }
 
-    public void playBaseball(){
+    public void runGame(){
         do {
             playOneRound();
-        } while(playerService.askRestart());
+        } while(askRestart());
+    }
+
+    private boolean askRestart() {
+        baseballView.printGameEnd();
+        return playerService.askRestart();
     }
 
     private void playOneRound() {
         computerService.generateComputerNumber();
 
         JudgeCountDto result;
+
         do {
              result = tryOnce();
              baseballView.printJudgeCount(result);
@@ -38,6 +44,7 @@ public class BaseballController {
     }
 
     private JudgeCountDto tryOnce() {
+        baseballView.printInputRequest();
         NumberDto playerNumber = playerService.inputPlayerNumber();
         NumberDto computerNumber = computerService.getComputerNumber();
         return judgeService.judgeNumber(playerNumber, computerNumber);
