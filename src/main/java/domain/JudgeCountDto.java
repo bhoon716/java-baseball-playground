@@ -1,11 +1,15 @@
 package domain;
 
+import validator.JudgeCountValidator;
+
 public class JudgeCountDto {
 
     private final Integer strikeCount;
     private final Integer ballCount;
 
     public JudgeCountDto(Integer strikeCount, Integer ballCount) {
+        JudgeCountValidator.validateJudgeCount(strikeCount, ballCount);
+
         this.strikeCount = strikeCount;
         this.ballCount = ballCount;
     }
